@@ -1,0 +1,5 @@
+risk,total,failures,failure_rate_pct
+Risk 1 (High),6783,2058,30.340557275541798
+Risk 2 (Medium),1191,374,31.40218303946264
+Risk 3 (Low),392,115,29.336734693877553
+Unknown,1,0,0.0
