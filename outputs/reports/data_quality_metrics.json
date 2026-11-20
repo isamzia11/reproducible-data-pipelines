@@ -1,0 +1,166 @@
+{
+    "raw_sha256": "31c1f7279a873f0bda30a348df4159f2983234624d3779032b9398aaf81781d8",
+    "before": {
+        "rows": 12000,
+        "columns": 17,
+        "missing_cells": 3749,
+        "missing_percentage": 1.84,
+        "exact_duplicate_rows": 0,
+        "missing_by_column": {
+            "inspection_id": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "dba_name": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "aka_name": {
+                "count": 18,
+                "percentage": 0.15
+            },
+            "license_": {
+                "count": 1,
+                "percentage": 0.01
+            },
+            "facility_type": {
+                "count": 45,
+                "percentage": 0.38
+            },
+            "risk": {
+                "count": 4,
+                "percentage": 0.03
+            },
+            "address": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "city": {
+                "count": 3,
+                "percentage": 0.03
+            },
+            "state": {
+                "count": 2,
+                "percentage": 0.02
+            },
+            "zip": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "inspection_date": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "inspection_type": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "results": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "violations": {
+                "count": 3544,
+                "percentage": 29.53
+            },
+            "latitude": {
+                "count": 44,
+                "percentage": 0.37
+            },
+            "longitude": {
+                "count": 44,
+                "percentage": 0.37
+            },
+            "location": {
+                "count": 44,
+                "percentage": 0.37
+            }
+        }
+    },
+    "after": {
+        "rows": 12000,
+        "columns": 17,
+        "missing_cells": 3700,
+        "missing_percentage": 1.81,
+        "exact_duplicate_rows": 0,
+        "missing_by_column": {
+            "inspection_id": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "dba_name": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "aka_name": {
+                "count": 18,
+                "percentage": 0.15
+            },
+            "license_": {
+                "count": 1,
+                "percentage": 0.01
+            },
+            "facility_type": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "risk": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "address": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "city": {
+                "count": 3,
+                "percentage": 0.03
+            },
+            "state": {
+                "count": 2,
+                "percentage": 0.02
+            },
+            "zip": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "inspection_date": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "inspection_type": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "results": {
+                "count": 0,
+                "percentage": 0.0
+            },
+            "violations": {
+                "count": 3544,
+                "percentage": 29.53
+            },
+            "latitude": {
+                "count": 44,
+                "percentage": 0.37
+            },
+            "longitude": {
+                "count": 44,
+                "percentage": 0.37
+            },
+            "location": {
+                "count": 44,
+                "percentage": 0.37
+            }
+        }
+    },
+    "cleaning": {
+        "original_rows": 12000,
+        "cleaned_rows": 12000,
+        "removed_rows": 0,
+        "invalid_ids_removed": 0,
+        "duplicate_ids_removed": 0,
+        "invalid_dates_removed": 0,
+        "invalid_coordinates_set_missing": 0
+    }
+}

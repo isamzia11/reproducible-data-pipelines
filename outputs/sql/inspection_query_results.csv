@@ -1,0 +1,6 @@
+risk,description,total_inspections,failed_inspections
+Risk 1 (High),High priority,9651,2058
+Risk 2 (Medium),Medium priority,1746,374
+Risk 3 (Low),Low priority,594,115
+All,Unmapped,5,0
+Unknown,Unspecified,4,0
