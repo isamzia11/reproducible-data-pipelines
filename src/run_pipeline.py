@@ -11,15 +11,15 @@ from pathlib import Path
 
 import pandas as pd
 
+from src.analysis import (
+    create_figures,
+    create_summaries,
+    run_sql_analysis,
+)
 from src.cleaning import clean_data
 from src.validation import (
-    validate_columns,
     validate_cleaned_data,
-)
-from src.analysis import (
-    create_summaries,
-    create_figures,
-    run_sql_analysis,
+    validate_columns,
 )
 
 
@@ -155,15 +155,21 @@ def save_quality_report(
             "",
             "## Interpretation",
             "",
-            "The pipeline rejects invalid IDs, duplicate IDs, "
-            "and invalid or out-of-range inspection dates.",
+            (
+                "The pipeline rejects invalid IDs, duplicate IDs, "
+                "and invalid or out-of-range inspection dates."
+            ),
             "",
-            "Missing category values are represented by Unknown. "
-            "Invalid coordinates become missing values.",
+            (
+                "Missing category values are represented by Unknown. "
+                "Invalid coordinates become missing values."
+            ),
             "",
-            "Missing percentages may increase because invalid "
-            "geographic values are converted into missing values. "
-            "That is not necessarily a data-quality failure.",
+            (
+                "Missing percentages may increase because invalid "
+                "geographic values are converted into missing values. "
+                "That is not necessarily a data-quality failure."
+            ),
             "",
             "## Raw Data Integrity",
             "",

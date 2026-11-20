@@ -118,7 +118,7 @@ def test_missing_categories():
     df = make_sample_data()
     df.loc[0, "facility_type"] = None
 
-    cleaned, stats = clean_data(df)
+    cleaned, _stats = clean_data(df)
 
     assert cleaned.loc[0, "facility_type"] == "Unknown"
 
@@ -153,7 +153,7 @@ def test_results_are_preserved():
     df = make_sample_data()
     df.loc[0, "results"] = "pass w/ conditions"
 
-    cleaned, stats = clean_data(df)
+    cleaned, _stats = clean_data(df)
 
     assert cleaned.loc[0, "results"] == "Pass w/ Conditions"
 

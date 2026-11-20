@@ -8,8 +8,8 @@ import pandas as pd
 import pytest
 
 from src.validation import (
-    validate_columns,
     validate_cleaned_data,
+    validate_columns,
 )
 
 

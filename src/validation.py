@@ -7,7 +7,6 @@
 
 import pandas as pd
 
-
 REQUIRED_COLUMNS = [
     "inspection_id",
     "inspection_date",

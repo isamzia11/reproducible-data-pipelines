@@ -5,8 +5,8 @@
 
 """Create analysis tables, visualizations and SQLite outputs."""
 
-from pathlib import Path
 import sqlite3
+from pathlib import Path
 
 import matplotlib
 
