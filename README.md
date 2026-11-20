@@ -3,7 +3,7 @@
 **Student:** Isam Zia
 **Roll Number:** TRN-2026-000346
 **Assignment:** Data Engineering and Machine Learning
-**Python Version:** 3.11
+**Python Version:** 3.14.10
 
 ## Project Overview
 
