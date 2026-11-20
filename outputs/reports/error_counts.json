@@ -1,0 +1,6 @@
+{
+    "false_positives": 603,
+    "false_negatives": 236,
+    "correct_predictions": 1011,
+    "total_test_records": 1850
+}
