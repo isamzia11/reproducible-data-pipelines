@@ -121,3 +121,39 @@ def test_missing_categories():
     cleaned, stats = clean_data(df)
 
     assert cleaned.loc[0, "facility_type"] == "Unknown"
+
+
+def test_missing_inspection_id():
+    """Check that missing inspection IDs are removed."""
+
+    df = make_sample_data()
+    df.loc[0, "inspection_id"] = None
+
+    cleaned, stats = clean_data(df)
+
+    assert stats["invalid_ids_removed"] == 1
+    assert cleaned["inspection_id"].notna().all()
+
+
+def test_out_of_range_date():
+    """Check that dates outside 2022-2023 are removed."""
+
+    df = make_sample_data()
+    df.loc[0, "inspection_date"] = "2020-01-01"
+
+    cleaned, stats = clean_data(df)
+
+    assert stats["invalid_dates_removed"] == 2
+    assert 101 not in cleaned["inspection_id"].tolist()
+
+
+def test_results_are_preserved():
+    """Check that Pass w/ Conditions is not changed to Pass."""
+
+    df = make_sample_data()
+    df.loc[0, "results"] = "pass w/ conditions"
+
+    cleaned, stats = clean_data(df)
+
+    assert cleaned.loc[0, "results"] == "Pass w/ Conditions"
+
