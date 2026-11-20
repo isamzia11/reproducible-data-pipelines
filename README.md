@@ -73,10 +73,10 @@ The repository preserves the accepted raw dataset snapshot. Later phases will pr
 - [✅] Checkpoint 1 — Dataset inspected and repository ready
 - [✅] Checkpoint 2 — Cleaning and validation
 - [✅] Checkpoint 3 — Part A completed
-- [ ] Checkpoint 4 — ML preprocessing pipeline
-- [ ] Checkpoint 5 — Model comparison
-- [ ] Checkpoint 6 — Saved model and Part C
-- [ ] Final submission and TA demo
+- [✅] Checkpoint 4 — ML preprocessing pipeline
+- [✅] Checkpoint 5 — Model comparison
+- [✅] Checkpoint 6 — Saved model and Part C
+
 
 ## AI Tools Used
 
@@ -193,3 +193,119 @@ Inspection outcomes are descriptive observations, not
 proof of causal relationships.
 
 See `docs/assumptions.md` for the complete discussion.
+
+
+## Part B — Tabular Machine Learning Baseline
+
+### Prediction Objective
+
+Predict whether a Chicago food inspection will result
+in Pass or Fail, using information assumed to be
+available before the inspection.
+
+The positive class is Fail (1).
+
+Other outcomes are excluded from this binary task.
+
+### Features
+
+The model uses:
+- Risk category
+- Facility type
+- Latitude
+- Longitude
+- Inspection month
+- Inspection weekday
+
+Post-inspection fields, including violations,
+are excluded to prevent target leakage.
+
+See docs/assumptions.md for the full feature policy.
+
+### Models
+
+Three pipelines are compared:
+
+1. Dummy Classifier
+2. Logistic Regression
+3. Random Forest
+
+Each pipeline contains a ColumnTransformer with
+numerical and categorical preprocessing.
+
+### Validation Strategy
+
+The data is split chronologically.
+
+The training portion is evaluated using three
+chronological validation folds.
+
+Models are selected using mean cross-validated
+Average Precision.
+
+The later held-out test set is evaluated only
+after selecting and fitting the winning model.
+
+### Train Models
+
+```bash
+python -m src.train
+```
+
+### Run Inference
+
+```bash
+python -m src.predict \
+  data/new_inspections.csv \
+  outputs/reports/new_predictions.csv
+```
+
+### Run Tests
+
+```bash
+python -m pytest tests/ -v
+```
+
+### Model Artifacts
+
+- outputs/models/best_pipeline.joblib
+- outputs/reports/model_comparison.csv
+- outputs/reports/test_metrics.json
+- outputs/reports/test_predictions.csv
+- outputs/reports/misclassified_rows.csv
+- outputs/reports/subgroup_performance.csv
+- outputs/reports/target_distribution.csv
+- outputs/reports/error_counts.json
+- outputs/figures/confusion_matrix.png
+
+### Model Comparison Findings
+
+Selected model: [Insert model]
+
+Mean cross-validation AP: [Insert value]
+
+Final test AP: [Insert value]
+Final test precision: [Insert value]
+Final test recall: [Insert value]
+Final test F1: [Insert value]
+
+False positives: [Insert count]
+False negatives: [Insert count]
+
+### Error Analysis Findings
+
+[Describe actual misclassified inspection examples.]
+
+[Describe performance differences across risk groups.]
+
+### Limitations
+
+The model is an educational prototype.
+
+It is not suitable for automated regulatory decisions.
+
+Historical data, feature availability, repeated
+establishments and group-level performance differences
+limit generalization.
+
+See the model card in docs/assumptions.md.
