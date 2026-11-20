@@ -1,0 +1,4 @@
+risk,facility_type,latitude,longitude,inspection_date
+Risk 1 (High),Restaurant,41.88,-87.63,2024-02-12
+Risk 2 (Medium),Grocery Store,41.91,-87.70,2024-03-08
+Risk 3 (Low),Bakery,41.85,-87.66,2024-04-19
