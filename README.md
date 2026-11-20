@@ -309,3 +309,14 @@ establishments and group-level performance differences
 limit generalization.
 
 See the model card in docs/assumptions.md.
+
+## Streamlit Dashboard
+
+Install dependencies using `python -m pip install -r requirements.txt`.
+Launch the local interactive dashboard with:
+
+```bash
+python -m streamlit run dashboard.py
+```
+
+The dashboard visualizes saved Part A and Part B artifacts and provides local model inference.
