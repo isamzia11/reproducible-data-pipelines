@@ -1,0 +1,154 @@
+Dataset shape: (12000, 17)
+
+Column names:
+['inspection_id', 'dba_name', 'aka_name', 'license_', 'facility_type', 'risk', 'address', 'city', 'state', 'zip', 'inspection_date', 'inspection_type', 'results', 'violations', 'latitude', 'longitude', 'location']
+
+First five rows:
+   inspection_id  ...                                       location
+0        2546078  ...  \n,  \n(41.8806769908738, -87.72581612691941)
+1        2546079  ...        (41.92875605419546, -87.66237147194119)
+2        2546080  ...        (41.96147827109243, -87.66949202485075)
+3        2546081  ...          (41.87501057316559, -87.627474631035)
+4        2546082  ...       (41.899021699577446, -87.62892425348232)
+
+[5 rows x 17 columns]
+
+Data types:
+inspection_id        int64
+dba_name               str
+aka_name               str
+license_           float64
+facility_type          str
+risk                   str
+address                str
+city                   str
+state                  str
+zip                  int64
+inspection_date        str
+inspection_type        str
+results                str
+violations             str
+latitude           float64
+longitude          float64
+location               str
+dtype: object
+
+Missing values:
+inspection_id         0
+dba_name              0
+aka_name             18
+license_              1
+facility_type        45
+risk                  4
+address               0
+city                  3
+state                 2
+zip                   0
+inspection_date       0
+inspection_type       0
+results               0
+violations         3544
+latitude             44
+longitude            44
+location             44
+dtype: int64
+
+Missing percentages:
+inspection_id       0.00
+dba_name            0.00
+aka_name            0.15
+license_            0.01
+facility_type       0.38
+risk                0.03
+address             0.00
+city                0.02
+state               0.02
+zip                 0.00
+inspection_date     0.00
+inspection_type     0.00
+results             0.00
+violations         29.53
+latitude            0.37
+longitude           0.37
+location            0.37
+dtype: float64
+
+Duplicate rows:
+0
+
+Duplicate inspection IDs:
+0
+
+Inspection result counts:
+results
+Pass                    5820
+Fail                    2547
+Pass w/ Conditions      1866
+Out of Business          816
+No Entry                 684
+Not Ready                262
+Business Not Located       5
+Name: count, dtype: int64
+
+Numerical summary:
+       inspection_id      license_           zip      latitude     longitude
+count   1.200000e+04  1.199900e+04  12000.000000  11956.000000  11956.000000
+mean    2.556398e+06  2.075287e+06  60627.559000     41.879137    -87.675146
+std     5.193670e+03  9.356463e+05    131.793111      0.079928      0.054852
+min     2.535216e+06  0.000000e+00  46394.000000     41.649558    -87.906874
+25%     2.553104e+06  1.878516e+06  60613.000000     41.830619    -87.704714
+50%     2.556116e+06  2.437144e+06  60625.000000     41.891135    -87.664907
+75%     2.561135e+06  2.738649e+06  60642.000000     41.935981    -87.636476
+max     2.566276e+06  4.067292e+06  60827.000000     42.021064    -87.527970
+
+Values in risk:
+Unique categories: 4
+risk
+Risk 1 (High)      9651
+Risk 2 (Medium)    1746
+Risk 3 (Low)        594
+All                   5
+NaN                   4
+Name: count, dtype: int64
+
+Values in facility_type:
+Unique categories: 98
+facility_type
+Restaurant                         8422
+Grocery Store                      1163
+School                              912
+Children's Services Facility        385
+Daycare Above and Under 2 Years     166
+Bakery                              135
+Long Term Care                      111
+Catering                             82
+Mobile Food Preparer                 70
+Daycare (2 - 6 Years)                55
+Name: count, dtype: int64
+
+Values in inspection_type:
+Unique categories: 13
+inspection_type
+Canvass                     5569
+License                     1706
+Canvass Re-Inspection       1463
+Complaint                   1446
+Complaint Re-Inspection      642
+Non-Inspection               497
+License Re-Inspection        398
+Short Form Complaint         218
+Recent Inspection             27
+Suspected Food Poisoning      25
+Name: count, dtype: int64
+
+Values in results:
+Unique categories: 7
+results
+Pass                    5820
+Fail                    2547
+Pass w/ Conditions      1866
+Out of Business          816
+No Entry                 684
+Not Ready                262
+Business Not Located       5
+Name: count, dtype: int64
